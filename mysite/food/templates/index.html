@@ -21,9 +21,10 @@
                 <h5>{{  item.item_desc}}</h5>
                 <h6>${{ item.item_price}}</h6>
 
+
             </div>
             <div class="col-md-2">
-                <a class="btn btn-success" href="">Details</a>
+                <a class="btn btn-success" href="{% url 'food:detail' item.id %}">Details</a>
 
             </div>
 
