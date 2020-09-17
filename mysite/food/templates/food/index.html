@@ -1,10 +1,9 @@
-{%extends 'base.html'%}
+{%extends 'food/base.html'%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-
 
 </head>
 <body>
@@ -20,20 +19,13 @@
                 <h3>{{  item.item_name}}</h3>
                 <h5>{{  item.item_desc}}</h5>
                 <h6>${{ item.item_price}}</h6>
-
-
+                <h6>Made by:{{ item.user_name}}</h6>
             </div>
             <div class="col-md-2">
                 <a class="btn btn-success" href="{% url 'food:detail' item.id %}">Details</a>
-
             </div>
-
-
         </div>
-
-
     {% endfor%}
-
     {%endblock%}
 
 
@@ -42,11 +34,6 @@
             <a href="{% url 'food:detail' item.id %}">{{item.id}} -- {{item.item_name}}
         </li>
     </ul>
-
-
-
-
-
 
 
 </body>
